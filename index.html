@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trámites de Aduanas Casanova, C.A.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TACVZLA</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="valores.html">Valores</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <!-- Background image layers for fade effect -->
+        <div class="hero-bg-layer active" style="background-image: url('img/hero01.jpg');"></div>
+        <div class="hero-bg-layer" style="background-image: url('img/hero02.jpg');"></div>
+        <div class="hero-bg-layer" style="background-image: url('img/hero03.webp');"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero.title">Más de 45 años facilitando el comercio internacional en Maracaibo</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Soluciones integrales en trámites aduaneros y logística internacional</p>
+            <a href="#contact" class="cta-button" data-i18n="hero.cta">Solicitar Consulta</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">Sobre Nosotros</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 data-i18n="about.history.title">Historia</h3>
+                    <p data-i18n="about.history.text">Fundada en 1979, hemos sido pioneros en el sector aduanero de Maracaibo, construyendo una sólida reputación basada en la excelencia y el cumplimiento normativo.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 data-i18n="about.mission.title">Misión</h3>
+                    <p data-i18n="about.mission.text">Brindar servicios aduaneros y logísticos con la más alta eficiencia, cumpliendo con todas las normativas vigentes y superando las expectativas de nuestros clientes.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 data-i18n="about.vision.title">Visión</h3>
+                    <p data-i18n="about.vision.text">Ser la empresa líder en servicios aduaneros de la región, reconocida por nuestra innovación, tecnología y compromiso con la excelencia en el comercio internacional.</p>
+                </div>
+            </div>
+            
+            <div class="experiencia-banner">
+                <div class="experiencia-content">
+                    <h3 data-i18n="about.experience.title">Experiencia</h3>
+                    <p data-i18n="about.experience.text">Con más de 45 años en el sector aduanero, brindamos un servicio de calidad basado en el conocimiento exhaustivo de las normativas aduaneras y la experiencia en el manejo de todo tipo de mercancías.</p>
+                </div>
+                <div class="experiencia-badge">
+                    <span class="badge-number">45</span>
+                    <span class="badge-text">AÑOS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <h3 data-i18n="services.customs.title">Despacho Aduanal</h3>
+                    </div>
+                    <p data-i18n="services.customs.text">Gestión completa de importación y exportación con cumplimiento normativo y optimización de tiempos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 data-i18n="services.logistics.title">Coordinación Logística</h3>
+                    </div>
+                    <p data-i18n="services.logistics.text">Transporte y almacenaje eficiente de mercancías con seguimiento en tiempo real.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 data-i18n="services.documents.title">Gestión de Documentos</h3>
+                    </div>
+                    <p data-i18n="services.documents.text">Elaboración y gestión de toda la documentación requerida para operaciones aduaneras.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-list-ol"></i>
+                        </div>
+                        <h3 data-i18n="services.classification.title">Clasificación Arancelaria</h3>
+                    </div>
+                    <p data-i18n="services.classification.text">Asesoría especializada en la correcta clasificación de mercancías para optimizar costos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3 data-i18n="services.regulations.title">Asesoría en Normativa</h3>
+                    </div>
+                    <p data-i18n="services.regulations.text">Actualización constante sobre normativas aduaneras y asesoría en cumplimiento legal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-i18n="services.personalized.title">Asesoría Personalizada</h3>
+                    </div>
+                    <p data-i18n="services.personalized.text">Soluciones a medida para cada cliente, con atención personalizada y seguimiento continuo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="values">
+        <div class="container">
+            <h2 class="section-title" data-i18n="values.title">Nuestros Valores</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 data-i18n="values.integrity">Integridad</h4>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4 data-i18n="values.commitment">Compromiso</h4>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4 data-i18n="values.responsibility">Responsabilidad</h4>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 data-i18n="values.efficiency">Eficiencia</h4>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4 data-i18n="values.trust">Confianza</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 data-i18n="contact.info.title">Información de Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong data-i18n="contact.manager">Gerente de Operaciones:</strong>
+                            <p>Nelson Fernández</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong data-i18n="contact.phone">Teléfono:</strong>
+                            <p>0412-0774999</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong data-i18n="contact.email">Correos Corporativos:</strong>
+                            <p>info@tacvzla.com</p>
+                            <p>operaciones@tacvzla.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 data-i18n="contact.form.title">Formulario de Consulta</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name" data-i18n="contact.form.name">Nombre Completo</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email" data-i18n="contact.form.email">Correo Electrónico</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone" data-i18n="contact.form.phone">Teléfono</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected data-i18n="contact.form.service.select">Seleccione un servicio</option>
+                                <option value="customs" data-i18n="services.customs.title">Despacho Aduanal</option>
+                                <option value="logistics" data-i18n="services.logistics.title">Coordinación Logística</option>
+                                <option value="documents" data-i18n="services.documents.title">Gestión de Documentos</option>
+                                <option value="classification" data-i18n="services.classification.title">Clasificación Arancelaria</option>
+                                <option value="regulations" data-i18n="services.regulations.title">Asesoría en Normativa</option>
+                                <option value="personalized" data-i18n="services.personalized.title">Asesoría Personalizada</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message" data-i18n="contact.form.message">Mensaje</label>
+                        </div>
+                        <button type="submit" class="submit-btn" data-i18n="contact.form.submit">Enviar Consulta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trámites de Aduanas Casanova, C.A. - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
