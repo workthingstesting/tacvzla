@@ -772,6 +772,31 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem 1rem;
     }
+
+    .experiencia-banner {
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        gap: 0;
+    }
+
+    .experiencia-content {
+        display: contents;
+    }
+
+    .experiencia-content h3 {
+        order: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .experiencia-badge {
+        order: 2;
+        margin-bottom: 1.5rem;
+    }
+
+    .experiencia-content p {
+        order: 3;
+    }
 }
 
 /* Scroll behavior */
