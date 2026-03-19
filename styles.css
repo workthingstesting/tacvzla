@@ -138,6 +138,33 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: var(--primary-red);
+    transform: translateY(-2px);
+}
+
 .language-selector select {
     background-color: var(--white);
     border: 2px solid var(--primary-red);
@@ -349,8 +376,16 @@ section {
 /* Values Section */
 .values {
     background-color: var(--dark-gray);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('img/fondo01.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
-    padding: 40px 0;
+    padding: 60px 0;
+}
+
+.values .section-title {
+    color: var(--white);
 }
 
 .values .container {
@@ -693,14 +728,32 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    .hero {
+        height: auto;
+        min-height: calc(100vh - 200px);
+        padding: 80px 20px;
+    }
+
     header .container {
         flex-direction: column;
         padding: 1rem;
     }
     
+    .header-actions {
+        margin-top: 0.5rem;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
     nav ul {
         margin: 1rem 0;
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .hero-title {
