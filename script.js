@@ -196,32 +196,58 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Simple validation
-        if (!data.name || !data.email || !data.service || !data.message) {
-            alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ? 
-                'Por favor complete todos los campos requeridos.' :
-                getTranslation('contact.form.submit') === 'Send Consultation' ?
-                'Please fill in all required fields.' :
-                '请填写所有必填字段。');
-            return;
-        }
-        
-        // Simulate form submission
-        alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ? 
-            '¡Gracias por su consulta! Nos pondremos en contacto pronto.' :
-            getTranslation('contact.form.submit') === 'Send Consultation' ?
-            'Thank you for your inquiry! We will contact you soon.' :
-            '感谢您的咨询！我们会尽快与您联系。');
-        
-        this.reset();
-    });
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.service || !data.message) {
+                alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ? 
+                    'Por favor complete todos los campos requeridos.' :
+                    getTranslation('contact.form.submit') === 'Send Consultation' ?
+                    'Please fill in all required fields.' :
+                    '请填写所有必填字段。');
+                return;
+            }
+            
+            // Cambiar el texto del botón mientras se envía
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+
+            // Send data using FormSubmit AJAX
+            fetch("https://formsubmit.co/ajax/workthingstesting@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ? 
+                    '¡Gracias por su consulta! Nos pondremos en contacto pronto.' :
+                    getTranslation('contact.form.submit') === 'Send Consultation' ?
+                    'Thank you for your inquiry! We will contact you soon.' :
+                    '感谢您的咨询！我们会尽快与您联系。');
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Hubo un error al enviar el formulario. Por favor, intente de nuevo más tarde.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
 });
 
 // Hero background fade slider functionality
