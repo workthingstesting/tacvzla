@@ -5,7 +5,7 @@ const translations = {
         'hero.title': 'Más de 45 años facilitando el comercio internacional en Maracaibo',
         'hero.subtitle': 'Soluciones integrales en trámites aduaneros y logística internacional',
         'hero.cta': 'Solicitar Consulta',
-        
+
         // About
         'about.title': 'Sobre Nosotros',
         'about.history.title': 'Historia',
@@ -16,7 +16,7 @@ const translations = {
         'about.vision.text': 'Ser la empresa líder en servicios aduaneros de la región, reconocida por nuestra innovación, tecnología y compromiso con la excelencia en el comercio internacional.',
         'about.experience.title': 'Experiencia',
         'about.experience.text': 'Con más de 45 años en el sector aduanero, brindamos un servicio de calidad basado en el conocimiento exhaustivo de las normativas aduaneras y la experiencia en el manejo de todo tipo de mercancías.',
-        
+
         // Services
         'services.title': 'Nuestros Servicios',
         'services.customs.title': 'Despacho Aduanal',
@@ -31,7 +31,7 @@ const translations = {
         'services.regulations.text': 'Actualización constante sobre normativas aduaneras y asesoría en cumplimiento legal.',
         'services.personalized.title': 'Asesoría Personalizada',
         'services.personalized.text': 'Soluciones a medida para cada cliente, con atención personalizada y seguimiento continuo.',
-        
+
         // Values
         'values.title': 'Nuestros Valores',
         'values.integrity': 'Integridad',
@@ -39,7 +39,7 @@ const translations = {
         'values.responsibility': 'Responsabilidad',
         'values.efficiency': 'Eficiencia',
         'values.trust': 'Confianza',
-        
+
         // Contact
         'contact.title': 'Contacto',
         'contact.info.title': 'Información de Contacto',
@@ -54,13 +54,13 @@ const translations = {
         'contact.form.message': 'Mensaje',
         'contact.form.submit': 'Enviar Consulta'
     },
-    
+
     en: {
         // Hero
         'hero.title': 'More than 45 years facilitating international trade in Maracaibo',
         'hero.subtitle': 'Comprehensive solutions in customs procedures and international logistics',
         'hero.cta': 'Request Consultation',
-        
+
         // About
         'about.title': 'About Us',
         'about.history.title': 'History',
@@ -71,7 +71,7 @@ const translations = {
         'about.vision.text': 'To be the leading company in customs services in the region, recognized for our innovation, technology and commitment to excellence in international trade.',
         'about.experience.title': 'Experience',
         'about.experience.text': 'With over 45 years in the customs sector, we provide a quality service based on deep knowledge of customs regulations and experience in handling all types of goods.',
-        
+
         // Services
         'services.title': 'Our Services',
         'services.customs.title': 'Customs Clearance',
@@ -86,7 +86,7 @@ const translations = {
         'services.regulations.text': 'Constant updates on customs regulations and advice on legal compliance.',
         'services.personalized.title': 'Personalized Advice',
         'services.personalized.text': 'Tailored solutions for each client, with personalized attention and continuous follow-up.',
-        
+
         // Values
         'values.title': 'Our Values',
         'values.integrity': 'Integrity',
@@ -94,7 +94,7 @@ const translations = {
         'values.responsibility': 'Responsibility',
         'values.efficiency': 'Efficiency',
         'values.trust': 'Trust',
-        
+
         // Contact
         'contact.title': 'Contact',
         'contact.info.title': 'Contact Information',
@@ -109,13 +109,13 @@ const translations = {
         'contact.form.message': 'Message',
         'contact.form.submit': 'Send Consultation'
     },
-    
+
     zh: {
         // Hero
         'hero.title': '45年以上在马拉开波促进国际贸易',
         'hero.subtitle': '海关手续和国际物流综合解决方案',
         'hero.cta': '请求咨询',
-        
+
         // About
         'about.title': '关于我们',
         'about.history.title': '历史',
@@ -126,7 +126,7 @@ const translations = {
         'about.vision.text': '成为该地区领先的海关服务公司，以我们的创新、技术和对国际贸易卓越的承诺而闻名。',
         'about.experience.title': '经验',
         'about.experience.text': '在海关行业拥有超过45年的经验，我们基于对海关法规的深入了解和处理各种货物的经验，提供高质量的服务。',
-        
+
         // Services
         'services.title': '我们的服务',
         'services.customs.title': '报关服务',
@@ -141,7 +141,7 @@ const translations = {
         'services.regulations.text': '海关法规的持续更新和合规法律建议。',
         'services.personalized.title': '个性化咨询',
         'services.personalized.text': '为每位客户提供量身定制的解决方案，提供个性化服务和持续跟进。',
-        
+
         // Values
         'values.title': '我们的价值观',
         'values.integrity': '诚信',
@@ -149,7 +149,7 @@ const translations = {
         'values.responsibility': '责任',
         'values.efficiency': '效率',
         'values.trust': '信任',
-        
+
         // Contact
         'contact.title': '联系方式',
         'contact.info.title': '联系信息',
@@ -167,22 +167,22 @@ const translations = {
 };
 
 // Initialize language on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Set default language from localStorage or use 'es'
     const savedLanguage = localStorage.getItem('language') || 'es';
     setLanguage(savedLanguage);
-    
+
     // Add event listener to language selector
     const languageSelect = document.getElementById('language-select');
     languageSelect.value = savedLanguage;
-    languageSelect.addEventListener('change', function() {
+    languageSelect.addEventListener('change', function () {
         const selectedLanguage = this.value;
         setLanguage(selectedLanguage);
         localStorage.setItem('language', selectedLanguage);
     });
-    
+
     // Add scroll effect to header
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -190,30 +190,30 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
     });
-    
+
     // Initialize hero background slider
     initHeroSlider();
-    
+
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-            
+
             // Simple validation
             if (!data.name || !data.email || !data.service || !data.message) {
-                alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ? 
+                alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ?
                     'Por favor complete todos los campos requeridos.' :
                     getTranslation('contact.form.submit') === 'Send Consultation' ?
-                    'Please fill in all required fields.' :
-                    '请填写所有必填字段。');
+                        'Please fill in all required fields.' :
+                        '请填写所有必填字段。');
                 return;
             }
-            
+
             // Cambiar el texto del botón mientras se envía
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
@@ -221,31 +221,31 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
 
             // Send data using FormSubmit AJAX
-            fetch("https://formsubmit.co/ajax/workthingstesting@gmail.com", {
+            fetch("https://formsubmit.co/ajax/info@tacvzla.com", {
                 method: "POST",
-                headers: { 
+                headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => response.json())
-            .then(data => {
-                alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ? 
-                    '¡Gracias por su consulta! Nos pondremos en contacto pronto.' :
-                    getTranslation('contact.form.submit') === 'Send Consultation' ?
-                    'Thank you for your inquiry! We will contact you soon.' :
-                    '感谢您的咨询！我们会尽快与您联系。');
-                this.reset();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un error al enviar el formulario. Por favor, intente de nuevo más tarde.');
-            })
-            .finally(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
+                .then(response => response.json())
+                .then(data => {
+                    alert(getTranslation('contact.form.submit') === 'Enviar Consulta' ?
+                        '¡Gracias por su consulta! Nos pondremos en contacto pronto.' :
+                        getTranslation('contact.form.submit') === 'Send Consultation' ?
+                            'Thank you for your inquiry! We will contact you soon.' :
+                            '感谢您的咨询！我们会尽快与您联系。');
+                    this.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Hubo un error al enviar el formulario. Por favor, intente de nuevo más tarde.');
+                })
+                .finally(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     }
 });
@@ -254,22 +254,22 @@ document.addEventListener('DOMContentLoaded', function() {
 function initHeroSlider() {
     const layers = document.querySelectorAll('.hero-bg-layer');
     if (!layers.length) return;
-    
+
     let currentIndex = 0;
     const totalImages = layers.length;
-    
+
     function nextSlide() {
         const currentLayer = layers[currentIndex];
         const nextIndex = (currentIndex + 1) % totalImages;
         const nextLayer = layers[nextIndex];
-        
+
         currentLayer.classList.remove('active');
         nextLayer.classList.add('active');
-        
+
         currentIndex = nextIndex;
         setTimeout(nextSlide, 5000);
     }
-    
+
     setTimeout(nextSlide, 5000);
 }
 
@@ -277,14 +277,14 @@ function initHeroSlider() {
 function setLanguage(language) {
     // Update HTML lang attribute
     document.documentElement.lang = language;
-    
+
     // Update body class for Chinese font support
     if (language === 'zh') {
         document.body.setAttribute('lang', 'zh');
     } else {
         document.body.removeAttribute('lang');
     }
-    
+
     // Update all elements with data-i18n attribute
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(element => {
@@ -299,7 +299,7 @@ function setLanguage(language) {
             }
         }
     });
-    
+
     // Update select options text
     updateSelectOptions(language);
 }
@@ -314,7 +314,7 @@ function getTranslation(key) {
 function updateSelectOptions(language) {
     const select = document.getElementById('service');
     const options = select.querySelectorAll('option');
-    
+
     options.forEach(option => {
         const key = option.getAttribute('data-i18n');
         if (key && translations[language] && translations[language][key]) {
