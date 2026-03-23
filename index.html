@@ -45,7 +45,9 @@
     <section id="hero" class="hero">
         <!-- Background image layers for fade effect -->
         <div class="hero-bg-layer active" style="background-image: url('img/hero01.jpg');"></div>
+        <div class="hero-bg-layer" style="background-image: url('img/hero04.jpg');"></div>
         <div class="hero-bg-layer" style="background-image: url('img/hero02.jpg');"></div>
+        <div class="hero-bg-layer" style="background-image: url('img/hero05.webp');"></div>
         <div class="hero-bg-layer" style="background-image: url('img/hero03.webp');"></div>
         
         <div class="hero-content">
@@ -60,21 +62,21 @@
         <div class="container">
             <h2 class="section-title" data-i18n="about.title">Sobre Nosotros</h2>
             <div class="about-grid">
-                <div class="about-card">
+                <div class="about-card history-card">
                     <div class="card-icon">
                         <i class="fas fa-history"></i>
                     </div>
                     <h3 data-i18n="about.history.title">Historia</h3>
                     <p data-i18n="about.history.text">Fundada en 1979, hemos sido pioneros en el sector aduanero de Maracaibo, construyendo una sólida reputación basada en la excelencia y el cumplimiento normativo.</p>
                 </div>
-                <div class="about-card">
+                <div class="about-card mission-card">
                     <div class="card-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3 data-i18n="about.mission.title">Misión</h3>
                     <p data-i18n="about.mission.text">Brindar servicios aduaneros y logísticos con la más alta eficiencia, cumpliendo con todas las normativas vigentes y superando las expectativas de nuestros clientes.</p>
                 </div>
-                <div class="about-card">
+                <div class="about-card vision-card">
                     <div class="card-icon">
                         <i class="fas fa-eye"></i>
                     </div>
@@ -101,59 +103,77 @@
         <div class="container">
             <h2 class="section-title" data-i18n="services.title">Nuestros Servicios</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card expandable-card">
                     <div class="card-header">
                         <div class="card-icon">
                             <i class="fas fa-ship"></i>
                         </div>
                         <h3 data-i18n="services.customs.title">Despacho Aduanal</h3>
                     </div>
-                    <p data-i18n="services.customs.text">Gestión completa de importación y exportación con cumplimiento normativo y optimización de tiempos.</p>
+                    <div class="expandable-body">
+                        <p class="short-desc" data-i18n="services.customs.text">Gestión completa de importación y exportación con cumplimiento normativo y optimización de tiempos.</p>
+                        <p class="long-desc">En TAC Trámites de Aduana Casanova C.A., transformamos el despacho aduanero en una ventaja competitiva para su negocio. Ofrecemos una gestión completa de importación y exportación, encargándonos de cada etapa del proceso logístico con un estricto cumplimiento normativo ante las autoridades arancelarias. Nuestro enfoque se centra en la optimización de tiempos y la reducción de costos operativos, garantizando que sus mercancías crucen fronteras sin demoras innecesarias. Contamos con un equipo experto dedicado a la clasificación arancelaria y asesoría estratégica, brindando la seguridad jurídica y la eficiencia que su carga requiere en el dinámico comercio internacional actual.</p>
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card expandable-card">
                     <div class="card-header">
                         <div class="card-icon">
                             <i class="fas fa-truck"></i>
                         </div>
                         <h3 data-i18n="services.logistics.title">Coordinación Logística</h3>
                     </div>
-                    <p data-i18n="services.logistics.text">Transporte y almacenaje eficiente de mercancías con seguimiento en tiempo real.</p>
+                    <div class="expandable-body">
+                        <p class="short-desc" data-i18n="services.logistics.text">Transporte y almacenaje eficiente de mercancías con seguimiento en tiempo real.</p>
+                        <p class="long-desc">Garantizamos el transporte y almacenaje eficiente de sus mercancías mediante una infraestructura logística de vanguardia. Nuestra solución integra seguimiento en tiempo real, brindándole visibilidad absoluta y seguridad en cada trayecto, optimizando la cadena de suministro con puntualidad y rigor operativo.</p>
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card expandable-card">
                     <div class="card-header">
                         <div class="card-icon">
                             <i class="fas fa-file-alt"></i>
                         </div>
                         <h3 data-i18n="services.documents.title">Gestión de Documentos</h3>
                     </div>
-                    <p data-i18n="services.documents.text">Elaboración y gestión de toda la documentación requerida para operaciones aduaneras.</p>
+                    <div class="expandable-body">
+                        <p class="short-desc" data-i18n="services.documents.text">Elaboración y gestión de toda la documentación requerida para operaciones aduaneras.</p>
+                        <p class="long-desc">Nos especializamos en la elaboración y gestión integral de toda la documentación exigida para sus operaciones aduaneras. Aseguramos el cumplimiento de cada requisito legal y técnico, desde declaraciones de valor hasta permisos especiales, eliminando riesgos de sanciones o retrasos. Nuestra precisión documental garantiza una nacionalización ágil, brindándole la tranquilidad jurídica que su carga y su empresa necesitan.</p>
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card expandable-card">
                     <div class="card-header">
                         <div class="card-icon">
                             <i class="fas fa-list-ol"></i>
                         </div>
                         <h3 data-i18n="services.classification.title">Clasificación Arancelaria</h3>
                     </div>
-                    <p data-i18n="services.classification.text">Asesoría especializada en la correcta clasificación de mercancías para optimizar costos.</p>
+                    <div class="expandable-body">
+                        <p class="short-desc" data-i18n="services.classification.text">Asesoría especializada en la correcta clasificación de mercancías para optimizar costos.</p>
+                        <p class="long-desc">Nuestra asesoría especializada garantiza la correcta clasificación arancelaria de sus mercancías, un paso crítico para el éxito de cualquier operación internacional. Analizamos técnicamente cada producto para asignar la codificación exacta, asegurando el cumplimiento legal y permitiendo optimizar costos mediante el aprovechamiento de beneficios fiscales o tratados comerciales vigentes. Evite sobrecostos por errores en partidas y aranceles; nuestro equipo técnico le brinda la precisión necesaria para maximizar la rentabilidad de sus importaciones y exportaciones con total seguridad jurídica.</p>
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card expandable-card">
                     <div class="card-header">
                         <div class="card-icon">
                             <i class="fas fa-gavel"></i>
                         </div>
                         <h3 data-i18n="services.regulations.title">Asesoría en Normativa</h3>
                     </div>
-                    <p data-i18n="services.regulations.text">Actualización constante sobre normativas aduaneras y asesoría en cumplimiento legal.</p>
+                    <div class="expandable-body">
+                        <p class="short-desc" data-i18n="services.regulations.text">Actualización constante sobre normativas aduaneras y asesoría en cumplimiento legal.</p>
+                        <p class="long-desc">Brindamos una actualización constante sobre normativas aduaneras, anticipándonos a cambios arancelarios o legales que puedan afectar sus operaciones. Nuestra asesoría en cumplimiento legal asegura que su empresa opere siempre dentro del marco vigente, mitigando riesgos de sanciones y agilizando procesos administrativos. Con nosotros, su carga cuenta con un respaldo técnico permanente, garantizando integridad jurídica y fluidez en cada trámite de comercio exterior.</p>
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card expandable-card">
                     <div class="card-header">
                         <div class="card-icon">
                             <i class="fas fa-handshake"></i>
                         </div>
                         <h3 data-i18n="services.personalized.title">Asesoría Personalizada</h3>
                     </div>
-                    <p data-i18n="services.personalized.text">Soluciones a medida para cada cliente, con atención personalizada y seguimiento continuo.</p>
+                    <div class="expandable-body">
+                        <p class="short-desc" data-i18n="services.personalized.text">Soluciones a medida para cada cliente, con atención personalizada y seguimiento continuo.</p>
+                        <p class="long-desc">En TAC Trámites de Aduana Casanova C.A., diseñamos soluciones a medida para cada cliente, reconociendo que cada operación de comercio exterior posee retos y requisitos únicos. Brindamos una atención personalizada desde el primer contacto, asignando expertos dedicados que actúan como aliados estratégicos en su cadena de suministro. Nuestro enfoque de seguimiento continuo garantiza una comunicación fluida y transparente en cada fase del proceso, asegurando que usted esté siempre informado. Nos comprometemos con la excelencia operativa y la cercanía, adaptando nuestros servicios para potenciar el crecimiento y la seguridad de su empresa en el mercado global.</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -191,6 +191,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Handle hover effect on expandable service cards
+    const expandableCards = document.querySelectorAll('.expandable-card');
+    expandableCards.forEach(card => {
+        const body = card.querySelector('.expandable-body');
+        let hoverTimer;
+
+        card.addEventListener('mouseenter', () => {
+            if (!card.classList.contains('show-long')) {
+                // Lock the height to precisely current height before changing text
+                const currentHeight = body.getBoundingClientRect().height;
+                body.style.height = `${currentHeight}px`;
+            }
+            
+            hoverTimer = setTimeout(() => {
+                card.classList.add('show-long');
+                body.classList.add('scrollable');
+            }, 2000);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            clearTimeout(hoverTimer);
+            card.classList.remove('show-long');
+            body.classList.remove('scrollable');
+            // Remove fixed height slightly after to avoid jumping
+            setTimeout(() => {
+                if (!card.classList.contains('show-long')) {
+                    body.style.height = '';
+                }
+            }, 50);
+        });
+    });
+
     // Initialize hero background slider
     initHeroSlider();
 

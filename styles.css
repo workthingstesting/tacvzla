@@ -307,6 +307,29 @@ section {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
+.about-card p {
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.history-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)), url('img/aeropuerto.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.mission-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)), url('img/mision.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.vision-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)), url('img/vision.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .card-icon {
     width: 60px;
     height: 60px;
@@ -371,6 +394,27 @@ section {
 .service-card p {
     padding: 1.5rem;
     margin-bottom: 0;
+}
+
+/* Custom styles for expandable service cards */
+.expandable-body {
+    overflow-y: hidden;
+}
+
+.expandable-body.scrollable {
+    overflow-y: auto;
+}
+
+.expandable-card .long-desc {
+    display: none;
+}
+
+.expandable-card.show-long .short-desc {
+    display: none;
+}
+
+.expandable-card.show-long .long-desc {
+    display: block;
 }
 
 /* Values Section */
