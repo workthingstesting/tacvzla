@@ -98,11 +98,11 @@ header .container {
     padding: 1rem 20px;
 }
 
-.logo h1 {
-    color: var(--primary-red);
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.logo img {
+    height: 78px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 nav ul {
